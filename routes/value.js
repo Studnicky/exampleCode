@@ -23,10 +23,6 @@ router.get('/:value', (req, res) => {
   //  This may seem a little extra, but it enables HTTP caching
   //  Normally I would use a schema but this is supposed to be quick
   initialValue = parseFloat( initialValue, 10 );
-  age = parseInt( age, 10 );
-  mileage = parseInt( mileage, 10 );
-  owners = parseInt( owners, 10 );
-  collisions = parseInt( collisions, 10 );
 
   ValueController.calculateValue(initialValue, age, mileage, owners, collisions)
   .then((estimatedValue) => {

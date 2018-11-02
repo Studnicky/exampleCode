@@ -13,6 +13,7 @@ const adjustForAge = (currentValue, age = 0) => {
   //  dot-env config is a rudimentary tool, but this is just an example.
   //  I would probably go for a Jenkins insertion script for prod deployments
   const MAX_AGE_COUNT = process.env.MAX_AGE_COUNT;
+  age = parseInt( age, 10 );
 
   return new Promise((resolve, reject) => {
     if(IsNan(age)) {
@@ -29,6 +30,7 @@ const adjustForAge = (currentValue, age = 0) => {
 
 const adjustForMileage = (currentValue, mileage = 0) => {
   const MAX_MILEAGE_COUNT = process.env.MAX_MILEAGE_COUNT;
+  mileage = parseInt( mileage, 10 );
 
   return new Promise((resolve, reject) => {
     if(IsNan(mileage)) {
@@ -45,6 +47,7 @@ const adjustForMileage = (currentValue, mileage = 0) => {
 
 const adjustForOwnerCount = (currentValue, owners = 0) => {
   const MAX_OWNERS_COUNT = process.env.MAX_OWNERS_COUNT;
+  owners = parseInt( owners, 10 );
 
   return new Promise((resolve, reject) => {
     if(IsNan(owners)) {
@@ -69,6 +72,7 @@ const adjustForOwnerCount = (currentValue, owners = 0) => {
 
 const adjustForCollisions = (currentValue, collisions = 0) => {
   const MAX_COLLISIONS_COUNT = process.env.MAX_COLLISIONS_COUNT;
+  collisions = parseInt( collisions, 10 );
 
   return new Promise((resolve, reject) => {
     if(IsNan(collisions)) {

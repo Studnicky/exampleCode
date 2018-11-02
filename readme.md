@@ -1,3 +1,20 @@
+## Solution
+This express server stands up an endpoint at /value that takes the following args:
+PATH /value/100000 (initial value of vehicle)
+QUERY ?age (age of vehicle in count of months)
+QUERY ?owners (count of vehicle owners)
+QUERY ?mileage (total mileage as integer)
+QUERY ?collisions (total number of collisions)
+
+Example query:
+> http://localhost:3000/value/12500.35?&age=60&owners=1&collisions=1&mileage=100000
+
+Expected output:
+> {
+initialValue: "12500.35",
+estimatedValue: "5145.14"
+}
+
 #### TASK
 You are tasked with writing an algorithm that determines the value of a used car, given several factors.
 
